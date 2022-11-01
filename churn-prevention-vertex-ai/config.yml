@@ -1,0 +1,41 @@
+gcp:
+  region: us-central1
+  project_id: gd-gcp-rnd-price-optimization
+  bucket_name: gd-gcp-rnd-churn-predictions-mnikolic
+data:
+  input_data:
+    file_name_short_term_train: account_train_data.csv
+    file_name_short_term_predict: account_predict_data.csv
+    file_name_long_term_v1_train: timeseries_data_train.csv
+    file_name_long_term_v1_predict: timeseries_data_predict.csv
+    file_name_long_term_v2_train: timeseries_data_train_regr.csv
+    file_name_long_term_v2_predict: timeseries_data_predict_regr.csv
+    file_name_sentiment_predict: sentiment_instances.jsonl
+    file_path_sentiment_train: "gs://cloud-samples-data/language/claritin.csv"
+    file_name_combined_data_train: combined_data_train.csv
+    file_name_combined_data_predict: combined_data_predict.csv
+    files_names_uplift_model:
+      none: account_predict_uplift_none.csv
+      discount: account_predict_uplift_discount.csv
+      free_device: account_predict_uplift_free_device.csv
+      upg_packet: account_predict_uplift_upg_packet.csv
+  output_data:
+    file_path_long_term_churn_model_v1: "mn-model-lt-predict-output/predictions-st-2022_07_19_114942/prediction-event-churn-prediction-model-2022_07_19T07_59_26_307Z"
+    file_path_long_term_churn_model_v2: "mn-ts-regr-experiment-var/predictions-2022_08_12_085914/prediction-timeseries-churn-prediction-model-regr-2022_08_12T04_52_01_570Z"
+    file_path_sentiment: "mn-model-sentiment-output/predictions-sentiment-2022_08_01_105750/prediction-gd-claritin-demo-2022_07_29_080451-2022-08-01T12:06:32.014529Z/predictions_00001.jsonl"
+    files_paths_uplift_model:
+      none: 'mn-model-uplift-none-output/predictions-uplift-2022_07_08_133112/prediction-uplift-churn-prediction-model-2022_07_08T08_55_32_480Z'
+      discount: 'mn-model-uplift-discount-output/predictions-uplift-2022_07_08_133112/prediction-uplift-churn-prediction-model-2022_07_08T09_19_36_426Z'
+      free_device: 'mn-model-uplift-free_device-output/predictions-uplift-2022_07_08_133112/prediction-uplift-churn-prediction-model-2022_07_08T09_33_30_996Z'
+      upg_packet: 'mn-model-uplift-upg_packet-output/predictions-uplift-2022_07_08_133112/prediction-uplift-churn-prediction-model-2022_07_08T09_48_04_487Z'
+artifacts:
+  model_id:
+    short_term_churn_model: '633894841691930624'
+    long_term_churn_model_v1: '9197700639369461760'
+    long_term_churn_model_v2: '294048991685902336'
+    uplift_model: '1303664548774936576'
+    sentiment_model: '1271083820220678144'
+  model_path:
+    long_term_churn_model_v1_folder: "mn-model-lt-predict-output"
+    long_term_churn_model_v2_folder: "mn-ts-regr-experiment-var"
+    sentiment_model_folder: "mn-model-sentiment-output"
