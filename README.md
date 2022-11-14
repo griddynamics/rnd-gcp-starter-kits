@@ -4,4 +4,4 @@
 
 - Price Optimisation
 - Churn Prevention
-- 
+- Anomaly detection IOT
