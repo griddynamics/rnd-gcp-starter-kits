@@ -1,4 +1,4 @@
-# Price optimization notebook for apparel retail using Google Vertex AI 
+# Anomaly detection in industrial IoT data using Google Vertex AI 
 
 ## Project description
 
